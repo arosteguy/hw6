@@ -3,3 +3,12 @@
     color: white;
     text-align: center;
 }
+.container-fluid{
+    padding: 50px;
+}
+#search-box{
+    
+}
+#display-box{
+    padding-left: 50px;
+}
