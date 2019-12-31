@@ -1,18 +1,20 @@
 var APIKey = "0411c80deb16f2578650b7d2f0908cf3";
 var queryURL = `https://api.openweathermap.org/data/2.5/weather?q=denver&appid=${APIKey}&units=imperial`;
 // var city = $(this).attr(".city");
-var fiveDayURL = `https://api.openweathermap.org/data/2.5/forecast?q=denver&appid=${APIKey}&units=imperial`;
+var fiveDayURL = `https://api.openweathermap.org/data/2.5/forecast?q=denver,us&appid=${APIKey}&units=imperial`;
 var searchInput = document.querySelector("#search-text");
 var searchForm = document.querySelector("#search-form");
 var searchList = document.querySelector("#search-list");
 
 var saveCity = [];
 
+
+
 $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function(response) {
-    $(".city").html("<h2>" + response.name + " Weather Details</h2>");
+    $(".city").html("<h2>" + response.name + "Weather Details </h2>");
            $(".wind").text("Wind Speed: " + response.wind.speed);
             $(".humidity").text("Humidity: " + response.main.humidity);
            $(".temp").text("Temperature (F):  " + response.main.temp);
@@ -88,7 +90,5 @@ searchForm.addEventListener("submit", function(event) {
     renderSaveCity();
 
     var a = moment.locale("America, Denver");
-
-    
     var c = moment().format("LL");
-             document.getElementById("#dateDisplay").innerHTML = c;
+    document.getElementById("#dateDisplay").innerHTML = c;
