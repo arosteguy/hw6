@@ -24,19 +24,21 @@
                     
                     <form id="search-form" method="POST">
                         <label for="search-text">Search for a City:</label>
-                        <input type="text"  name="search-text" id="search-text" />
+                        <input type="text"  id="search-text" />
+                        <input id = "search-button" type = "submit" value = "Search" ></input>
                     </form>
-                    <ul id="search-list"></ul>
+
+                    <div id="search-list"></div>
                 </div>
         
                 <div class= "col-md-8" id= "display-box">
 
-                <div class="city" id= "date-display"><h3></h3></div>
-
-                    <div class="temp"></div>
-                    <div class="humidity"></div>
-                    <div class="wind"></div>
-                    <div class="uv-index"></div>
+                <div id = "current" id= "date-display"></div>
+                    <div class = "city"></div>
+                    <div class = "temp"></div>
+                    <div class = "humidity"></div>
+                    <div class = "wind"></div>
+                    <div class = "uv-index"></div>
                     
                 <div class= "forecast">
                     <h4>5- day Forecast:</h4>
@@ -58,7 +60,7 @@
         
       
 
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="script.js"></script>
